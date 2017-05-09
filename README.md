@@ -7,17 +7,16 @@ This repository is for private purposes in order to get in touch with GraphQL fr
 
 
 ## GraphlQL Query
-```json
+```javascript
 {
   {
-  stock(Symbol: "msft") {
-    Symbol
-    CompanyName
-    Price
-    Diff
+    stock(Symbol: "msft") {
+      Symbol
+      CompanyName
+      Price
+      Diff
+    }
   }
-}
-
 }
 ```
 
