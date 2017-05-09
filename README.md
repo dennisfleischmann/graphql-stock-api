@@ -10,7 +10,7 @@ This repository is for private purposes using GraphQL from Facebook. Inc
 ```javascript
 {
   {
-    stock(Symbol: "msft") {
+    stock(Symbol: "fb") {
       Symbol
       CompanyName
       Price
