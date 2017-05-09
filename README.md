@@ -1,6 +1,11 @@
 # Introduction
 This repository is for private purposes in order to get in touch with GraphQL from Facebook. Inc
 
+## Sample Project
+
+<code>https://graphql-stock-api.herokuapp.com/graphql</code>
+
+
 ## GraphlQL Query
 ```json
 {
