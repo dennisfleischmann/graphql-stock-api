@@ -3,10 +3,12 @@ const { exposeStockData } = require('./mapper');
 
 const fetchStockData = ({ code }) => {
   return axios.get(`https://www.quandl.com/api/v3/datasets/WIKI/${code}/data.json?api_key=${'hyFyxojQfFCYfK_6tesP'}&limit=5s`)
-    .then(function(response) {
+    .then(({ data }) => {
+      console.log('quandlAPI.data', data);
+      console.log('xposeStockData(data)', xposeStockData(data));
       return Object.assign(
         {}, 
-        exposeStockData(response.data), 
+        exposeStockData(data), 
         { code });
     })
     .catch(function(error) {

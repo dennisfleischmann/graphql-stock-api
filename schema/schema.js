@@ -37,17 +37,16 @@ const RootQuery = new GraphQLObjectType({
       args: { Symbol: { type: GraphQLString } },
       resolve(parentValue, args) {
         return quandleAPI.fetchStockData({ code: args.Symbol })
-          .then(function(result) {
+          .then(({ Price, Diff }) => {
+            const stockInfo = _.find(DATA, { Symbol: _.toUpper(args.Symbol) });
 
-            const stockInformation = _.find(DATA, { Symbol: _.toUpper(args.Symbol) });
-
-            if (!stockInformation) return null;
+            if (!stockInfo) return null;
 
             return Object.assign({},
               _.find(DATA, { Symbol: _.toUpper(args.Symbol) }), {
-                Price: result.Price,
+                Price,
                 Exchange: "NASDAQ",
-                Diff: result.Diff,
+                Diff,
                 CompanyName: stockInformation["Company Name"],
                 SecurityName: stockInformation["Security Name"],
                 MarketCategory: stockInformation["Market Category"],
