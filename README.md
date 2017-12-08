@@ -9,15 +9,14 @@ This repository is for private purposes using GraphQL from Facebook. Inc
 ## GraphlQL Query
 ```javascript
 {
-  {
-    stock(Symbol: "fb") {
-      Symbol
-      CompanyName
-      Price
-      Diff
-    }
+  stock(Symbol: "fb") {
+    Symbol
+    CompanyName
+    Price
+    Diff
   }
 }
+
 ```
 
 
