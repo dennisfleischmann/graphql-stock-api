@@ -1,5 +1,5 @@
 # Introduction
-This repository is for private purposes using GraphQL from Facebook. Inc
+This repository is for private purposes using GraphQL from Facebook. Inc  
 
 ## Sample Project
 
